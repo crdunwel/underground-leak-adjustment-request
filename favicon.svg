@@ -1,9 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="12" fill="#4f73bf"/>
-  <rect x="14" y="10" width="36" height="44" rx="3" fill="#fff"/>
-  <rect x="19" y="16" width="26" height="4" rx="1" fill="#4f73bf"/>
-  <rect x="19" y="25" width="26" height="15" rx="1.5" fill="#4f73bf"/>
-  <path d="M23 35 L32 27 L41 35 H38 V39 H26 V35 Z" fill="#fff"/>
-  <rect x="19" y="45" width="13" height="3" rx="1" fill="#4f73bf"/>
-  <rect x="35" y="45" width="10" height="3" rx="1" fill="#4f73bf"/>
+<!-- public/favicon.svg -->
+
+<svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 64 64"
+>
+  <rect
+          width="64"
+          height="64"
+          rx="14"
+          fill="#0b5cff"
+  />
+
+  <!-- Pipe -->
+  <path
+          d="M18 18
+           H36
+           C43 18 48 23 48 30
+           V34"
+          fill="none"
+          stroke="#ffffff"
+          stroke-width="8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+  />
+
+  <!-- Leak drop -->
+  <path
+          d="M48 38
+           C48 38 42 45 42 49
+           A6 6 0 0 0 54 49
+           C54 45 48 38 48 38Z"
+          fill="#9ed0ff"
+  />
+
+  <!-- Small wrench accent -->
+  <path
+          d="M20 44
+           L27 37
+           M24 48
+           L31 41"
+          stroke="#ffffff"
+          stroke-width="4"
+          stroke-linecap="round"
+  />
 </svg>
