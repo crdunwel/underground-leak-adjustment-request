@@ -386,6 +386,8 @@
         width: min(100%, 520px);
         max-height: 280px;
         height: auto;
+        margin-top: 16px;
+        margin-bottom: 16px;
     }
 
     .preStartActions {

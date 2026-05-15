@@ -31,15 +31,18 @@ export function PreStartPage({ onStart,  onTermsClick }: PreStartPageProps) {
                             submission.
                         </p>
 
-                        {/* src/components/PreStartPage.tsx */}
+                        <picture>
+                            <source
+                                srcSet={assetPath('illustration.webp')}
+                                type="image/webp"
+                            />
 
-                        <div className="preStartLeakBanner" aria-hidden="true">
                             <img
-                                src={assetPath('illustration.png')}
+                                src={assetPath('illustration.jpg')}
                                 alt=""
                                 className="preStartLeakBannerImage"
                             />
-                        </div>
+                        </picture>
 
                         <div className="preStartActions">
                             <button
