@@ -1,5 +1,7 @@
 /* src/components/RequirementsStep.tsx */
 
+import '@/styles/steps/requirements-step.css'
+
 export function RequirementsStep() {
     return (
         <div className="stepBody formGrid">

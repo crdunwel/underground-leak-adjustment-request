@@ -1,5 +1,7 @@
 /* src/components/SiteFooter.tsx */
 
+import '@/styles/footer.css'
+
 type SiteFooterProps = {
     onTermsClick: () => void
 }
@@ -14,23 +16,25 @@ export function SiteFooter({ onTermsClick }: SiteFooterProps) {
                     🏛️ Not affiliated with Miami-Dade County
                 </span>
 
-                <a
-                    href="#terms"
-                    onClick={(event) => {
-                        event.preventDefault()
-                        onTermsClick()
-                    }}
-                >
-                    Terms of Use
-                </a>
+                <span className="footerLegalLinks">
+                    <a
+                        href="#terms"
+                        onClick={(event) => {
+                            event.preventDefault()
+                            onTermsClick()
+                        }}
+                    >
+                        Terms of Use
+                    </a>
 
-                <a
-                    href="https://github.com/crdunwel/underground-leak-adjustment-request"
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    Open source
-                </a>
+                    <a
+                        href="https://github.com/crdunwel/underground-leak-adjustment-request"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        Open source
+                    </a>
+                </span>
             </div>
 
             <div className="footerSecondary">

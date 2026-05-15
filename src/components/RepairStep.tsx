@@ -2,6 +2,8 @@
 
 import type { LeakFormData, StepProps } from '../types/leakForm'
 
+import '@/styles/steps/repair-step.css'
+
 export function RepairStep({ formData, updateField, hasFieldError }: StepProps) {
     return (
         <div className="stepBody formGrid">

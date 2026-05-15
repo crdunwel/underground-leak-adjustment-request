@@ -2,6 +2,8 @@
 
 import type { StepProps } from '../types/leakForm'
 
+import '@/styles/steps/account-step.css'
+
 export function AccountStep({ formData, updateField, hasFieldError }: StepProps) {
     return (
         <div className="stepBody">

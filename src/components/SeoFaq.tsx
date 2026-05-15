@@ -1,5 +1,7 @@
 /* src/components/SeoFaq.tsx */
 
+import '@/styles/seo-faq.css'
+
 export function SeoFaq() {
     const contactSubject =
         'Question about Underground Leak Adjustment Request'

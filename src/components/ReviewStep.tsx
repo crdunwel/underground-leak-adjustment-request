@@ -1,5 +1,7 @@
 /* src/components/ReviewStep.tsx */
 
+import '@/styles/steps/review-step.css'
+
 import { StepErrorBox } from './StepErrorBox'
 
 type ReviewStepProps = {

@@ -5,6 +5,8 @@ import { SiteFooter } from './SiteFooter'
 
 import { assetPath } from '../lib/assetPath'
 
+import '@/styles/pre-start.css'
+
 type PreStartPageProps = {
     onStart: () => void
     onTermsClick: () => void
@@ -28,6 +30,16 @@ export function PreStartPage({ onStart,  onTermsClick }: PreStartPageProps) {
                             and generate a completed PDF packet for
                             submission.
                         </p>
+
+                        {/* src/components/PreStartPage.tsx */}
+
+                        <div className="preStartLeakBanner" aria-hidden="true">
+                            <img
+                                src={assetPath('illustration.png')}
+                                alt=""
+                                className="preStartLeakBannerImage"
+                            />
+                        </div>
 
                         <div className="preStartActions">
                             <button

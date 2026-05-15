@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from 'react'
 
+import '@/styles/steps/signature-step.css'
+
 type SignatureStepProps = {
     hasError: boolean
     signatureDataUrl: string

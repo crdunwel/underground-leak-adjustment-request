@@ -2,16 +2,14 @@
 
 .appShell {
     width: min(100%, 1180px);
-
     min-height: 100dvh;
-
     margin: 0 auto;
     padding: 40px 20px 28px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
 .hero {
     margin-bottom: 34px;
 }
@@ -194,15 +192,6 @@
     line-height: 1.55;
 }
 
-.siteFooter {
-    display: flex;
-    justify-content: center;
-    gap: 34px;
-    margin-top: 44px;
-    color: var(--faint);
-    font-size: 0.9rem;
-}
-
 .plumberCard {
     display: grid;
     gap: 10px;
@@ -246,45 +235,6 @@
     background: var(--blue-dark);
 }
 
-.siteFooter {
-    display: grid;
-    gap: 18px;
-    margin-top: 44px;
-    padding-top: 24px;
-    border-top: 1px solid var(--line);
-}
-
-.footerPrimary,
-.footerSecondary {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 18px;
-    flex-wrap: wrap;
-}
-
-.footerPrimary {
-    color: var(--faint);
-    font-size: 0.9rem;
-}
-
-.footerPrimary a,
-.footerSecondary a {
-    color: var(--blue);
-    font-weight: 700;
-    text-decoration: none;
-}
-
-.footerPrimary a:hover,
-.footerSecondary a:hover {
-    text-decoration: underline;
-}
-
-.footerSecondary {
-    color: var(--muted);
-    font-size: 0.95rem;
-}
-
 .termsInlineLink {
     width: fit-content;
     margin-top: 4px;
@@ -323,11 +273,5 @@
 
     .workflowCard {
         padding: 22px;
-    }
-
-    .siteFooter {
-        display: grid;
-        gap: 10px;
-        text-align: center;
     }
 }

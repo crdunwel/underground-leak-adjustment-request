@@ -26,7 +26,7 @@
 .preStartCopy h1 {
     margin: 0;
     max-width: 760px;
-    font-size: clamp(2.6rem, 6.4vw, 4.4rem);
+    font-size: clamp(2.3rem, 6.4vw, 4.4rem);
     line-height: 0.95;
     letter-spacing: -0.07em;
 }
@@ -272,6 +272,19 @@
     );
 }
 
+.preStartLeakBanner {
+    display: none;
+    margin: 24px 0 0;
+}
+
+.preStartLeakBannerImage {
+    display: block;
+    width: 100%;
+    max-height: 240px;
+    object-fit: contain;
+    filter: drop-shadow(0 16px 28px rgba(15, 23, 42, 0.10));
+}
+
 @media (max-width: 900px) {
     .preStartHeroRow {
         grid-template-columns: 1fr;
@@ -279,6 +292,10 @@
 
     .preStartIllustration {
         display: none;
+    }
+
+    .preStartLeakBanner {
+        display: block;
     }
 
     .overviewGrid {
@@ -314,5 +331,81 @@
 
     .overviewCard {
         min-height: 0;
+    }
+
+    .preStartCopy h1 {
+        font-size: clamp(2.05rem, 11vw, 3.2rem);
+        line-height: 0.98;
+    }
+
+    .preStartCopy > .preStartIntro {
+        font-size: 1.05rem;
+        line-height: 1.52;
+    }
+
+    .preStartLeakBanner {
+        margin-top: 18px;
+    }
+
+    .preStartLeakBannerImage {
+        max-height: 190px;
+    }
+
+    /* src/styles/pre-start.css */
+
+    .appShell.preStartShell {
+        padding: 12px 14px 22px;
+        justify-content: flex-start;
+    }
+
+    .preStartHeroRow {
+        min-height: calc(100dvh - 24px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 24px 22px 22px;
+    }
+
+    .preStartCopy h1 {
+        font-size: clamp(2rem, 10.4vw, 3rem);
+        line-height: 0.98;
+        letter-spacing: -0.065em;
+    }
+
+    .preStartCopy > .preStartIntro {
+        margin-top: 16px;
+        font-size: 1rem;
+        line-height: 1.45;
+    }
+
+    .preStartLeakBanner {
+        margin-top: 14px;
+    }
+
+    .preStartLeakBannerImage {
+        width: min(100%, 520px);
+        max-height: 280px;
+        height: auto;
+    }
+
+    .preStartActions {
+        gap: 10px;
+        margin-top: 16px;
+    }
+
+    .primaryButton,
+    .secondaryLinkButton {
+        min-height: 50px;
+    }
+
+    .preStartCopy > .browserNote {
+        margin-top: 14px;
+        margin-bottom: 0;
+        font-size: 0.95rem;
+        text-align: center;
+    }
+
+    .overviewBlock {
+        padding: 26px 22px 22px;
     }
 }

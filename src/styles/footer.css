@@ -1,0 +1,70 @@
+/* src/styles/footer.css */
+
+.siteFooter {
+    display: grid;
+    gap: 18px;
+    margin-top: 44px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    text-align: center;
+}
+
+.footerPrimary,
+.footerSecondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.footerPrimary {
+    color: var(--faint);
+    font-size: 0.9rem;
+}
+
+.footerSecondary {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.footerPrimary a,
+.footerSecondary a {
+    color: var(--blue);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.footerPrimary a:hover,
+.footerSecondary a:hover {
+    text-decoration: underline;
+}
+
+.footerLegalLinks {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    font-size: inherit;
+}
+
+.footerLegalLinks a {
+    font-size: inherit;
+}
+
+@media (max-width: 640px) {
+    .siteFooter {
+        gap: 10px;
+    }
+
+    .footerPrimary {
+        display: grid;
+        justify-items: center;
+        gap: 10px;
+    }
+
+    .footerLegalLinks {
+        margin-top: 10px;
+        margin-bottom: 6px;
+    }
+}

@@ -3,6 +3,8 @@
 import { formatPhoneNumber, formatZip } from '../lib/formatters'
 import type { StepProps } from '../types/leakForm'
 
+import '@/styles/steps/contact-step.css'
+
 export function ContactStep({ formData, updateField, hasFieldError }: StepProps) {
     return (
         <div className="stepBody formGrid">

@@ -56,17 +56,9 @@ import type {
 import './styles/base.css'
 import './styles/layout.css'
 import './styles/forms.css'
-import './styles/steps/account-step.css'
-import './styles/steps/contact-step.css'
-import './styles/steps/repair-step.css'
 import './styles/steps/document-step.css'
-import './styles/steps/signature-step.css'
-import './styles/steps/review-step.css'
-import './styles/pre-start.css'
 import './styles/terms.css'
-import './styles/steps/requirements-step.css'
 import './styles/print.css'
-import './styles/seo-faq.css'
 
 function getStepIndexFromId(stepId: StepId) {
     const index = steps.findIndex((step) => step.id === stepId)
