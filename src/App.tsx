@@ -65,6 +65,7 @@ import './styles/pre-start.css'
 import './styles/terms.css'
 import './styles/steps/requirements-step.css'
 import './styles/print.css'
+import './styles/seo-faq.css'
 
 function getStepIndexFromId(stepId: StepId) {
     const index = steps.findIndex((step) => step.id === stepId)

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://crdunwel.github.io/underground-leak-adjustment-request/sitemap.xml

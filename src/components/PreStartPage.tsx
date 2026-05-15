@@ -1,5 +1,7 @@
 /* src/components/PreStartPage.tsx */
 
+import { SeoFaq } from './SeoFaq'
+
 import { assetPath } from '../lib/assetPath'
 
 type PreStartPageProps = {
@@ -12,23 +14,33 @@ export function PreStartPage({ onStart }: PreStartPageProps) {
             <section className="preStartPanel">
                 <div className="preStartHeroRow">
                     <div className="preStartCopy">
-                        <p className="departmentPill">Miami-Dade Water & Sewer Department</p>
+                        <p className="departmentPill">
+                            Miami-Dade Water & Sewer Department
+                        </p>
 
                         <h1>Underground Leak Adjustment</h1>
 
                         <p className="preStartIntro">
-                            This tool helps you fill out the official Miami-Dade underground leak
-                            adjustment form and generate a completed PDF for submission.
+                            This tool helps you fill out the official
+                            Miami-Dade underground leak adjustment form
+                            and generate a completed PDF packet for
+                            submission.
                         </p>
 
                         <div className="preStartActions">
-                            <button type="button" className="primaryButton" onClick={onStart}>
+                            <button
+                                type="button"
+                                className="primaryButton"
+                                onClick={onStart}
+                            >
                                 → Start the form
                             </button>
 
                             <a
                                 className="secondaryLinkButton"
-                                href={assetPath('underground-leak-adjustment-request.pdf')}
+                                href={assetPath(
+                                    'underground-leak-adjustment-request.pdf',
+                                )}
                                 target="_blank"
                                 rel="noreferrer"
                             >
@@ -36,13 +48,22 @@ export function PreStartPage({ onStart }: PreStartPageProps) {
                             </a>
                         </div>
 
-                        <p className="browserNote">🔒 Your information stays in this browser.</p>
+                        <p className="browserNote">
+                            🔒 Your information stays in this browser.
+                        </p>
                     </div>
 
-                    <div className="preStartIllustration" aria-hidden="true">
+                    <div
+                        className="preStartIllustration"
+                        aria-hidden="true"
+                    >
                         <div className="clipboardIcon">
                             <div className="clipTop" />
-                            <strong>Leak Adjustment Request</strong>
+
+                            <strong>
+                                Leak Adjustment Request
+                            </strong>
+
                             <span />
                             <span />
                             <span />
@@ -58,39 +79,73 @@ export function PreStartPage({ onStart }: PreStartPageProps) {
 
                     <div className="overviewGrid">
                         <article className="overviewCard">
-                            <span className="overviewIcon blueIcon">🚰</span>
+                            <span className="overviewIcon blueIcon">
+                                🚰
+                            </span>
+
                             <h3>What it is</h3>
-                            <p>A Miami-Dade form for requesting a leak-related bill adjustment.</p>
+
+                            <p>
+                                A Miami-Dade form for requesting a
+                                leak-related water bill adjustment.
+                            </p>
                         </article>
 
                         <article className="overviewCard">
-                            <span className="overviewIcon greenIcon">✅</span>
+                            <span className="overviewIcon greenIcon">
+                                ✅
+                            </span>
+
                             <h3>Use it when</h3>
-                            <p>Your bill went up because of a leak and the repair is complete.</p>
+
+                            <p>
+                                Your water bill increased because of
+                                an underground or concealed leak and
+                                the repair is complete.
+                            </p>
                         </article>
 
                         <article className="overviewCard">
-                            <span className="overviewIcon goldIcon">📁</span>
+                            <span className="overviewIcon goldIcon">
+                                📁
+                            </span>
+
                             <h3>What you need</h3>
-                            <p>Repair documents and photos, we help generate the signed form.</p>
+
+                            <p>
+                                Repair documents and before/after
+                                photos. We help generate the signed
+                                PDF packet.
+                            </p>
                         </article>
 
                         <article className="overviewCard">
-                            <span className="overviewIcon redIcon">🚫</span>
+                            <span className="overviewIcon redIcon">
+                                🚫
+                            </span>
+
                             <h3>What it is not</h3>
-                            <p>We are not Miami-Dade and cannot approve any adjustments.</p>
+
+                            <p>
+                                We are not Miami-Dade County and
+                                cannot approve or deny adjustments.
+                            </p>
                         </article>
                     </div>
 
                     <div className="preStartNotice">
                         <span>🛡️</span>
+
                         <p>
-                            We are not the Miami-Dade Government. This tool only helps you complete
-                            and organize the official form.
+                            We are not the Miami-Dade Government.
+                            This tool only helps you complete and
+                            organize the official form.
                         </p>
                     </div>
                 </div>
             </section>
+
+            <SeoFaq />
         </main>
     )
 }

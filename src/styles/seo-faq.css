@@ -1,0 +1,60 @@
+/* src/styles/seo-faq.css */
+
+.seoFaq {
+    width: min(100%, 1180px);
+    margin: 56px auto 0;
+    padding: 0 20px 44px;
+}
+
+.seoFaqHeader {
+    max-width: 760px;
+    margin-bottom: 24px;
+}
+
+.seoFaqHeader h2 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1;
+    letter-spacing: -0.055em;
+}
+
+.seoFaqHeader p {
+    margin: 16px 0 0;
+    color: var(--muted);
+    line-height: 1.65;
+}
+
+.seoFaqGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.seoFaqGrid article {
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: white;
+    padding: 20px;
+    box-shadow: var(--shadow);
+}
+
+.seoFaqGrid h3 {
+    margin: 0 0 10px;
+    font-size: 1.05rem;
+}
+
+.seoFaqGrid p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+@media (max-width: 720px) {
+    .seoFaq {
+        padding: 0 14px 34px;
+    }
+
+    .seoFaqGrid {
+        grid-template-columns: 1fr;
+    }
+}
