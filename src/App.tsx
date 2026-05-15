@@ -72,14 +72,20 @@ function getStepIndexFromId(stepId: StepId) {
     return index === -1 ? 0 : index
 }
 
+const USE_SAMPLE_DATA = false
+
 function getInitialState(route: AppRoute): StoredAppState {
     const savedDraft = loadDraft(steps.length - 1)
+
+    const fallbackFormData = USE_SAMPLE_DATA
+        ? sampleLeakFormData
+        : initialLeakFormData
 
     if (route.screen === 'workflow') {
         return {
             hasStarted: true,
             currentStepIndex: getStepIndexFromId(route.stepId),
-            formData: savedDraft?.formData ?? sampleLeakFormData,
+            formData: savedDraft?.formData ?? fallbackFormData,
             signatureDataUrl: savedDraft?.signatureDataUrl ?? '',
         }
     }
@@ -87,7 +93,7 @@ function getInitialState(route: AppRoute): StoredAppState {
     return {
         hasStarted: false,
         currentStepIndex: savedDraft?.currentStepIndex ?? 0,
-        formData: savedDraft?.formData ?? sampleLeakFormData,
+        formData: savedDraft?.formData ?? fallbackFormData,
         signatureDataUrl: savedDraft?.signatureDataUrl ?? '',
     }
 }
@@ -319,16 +325,16 @@ function App() {
         })
     }
 
-    function resetToSample() {
-        setFormData(sampleLeakFormData)
-        setSignatureDataUrl('')
-        setPhotos([])
-        setInvoiceFiles([])
-        setSupportingFiles([])
-        setUploadsRestored(true)
-        setCurrentStepIndex(0)
-        setShowErrors(false)
-    }
+    // function resetToSample() {
+    //     setFormData(sampleLeakFormData)
+    //     setSignatureDataUrl('')
+    //     setPhotos([])
+    //     setInvoiceFiles([])
+    //     setSupportingFiles([])
+    //     setUploadsRestored(true)
+    //     setCurrentStepIndex(0)
+    //     setShowErrors(false)
+    // }
 
     function goNext() {
         setShowErrors(true)
