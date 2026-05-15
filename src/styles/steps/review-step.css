@@ -1,33 +1,117 @@
 /* src/styles/steps/review-step.css */
 
+.reviewPanel {
+    display: grid;
+    gap: 22px;
+}
+
+.reviewIntro {
+    display: grid;
+    gap: 10px;
+}
+
 .reviewPanel h3 {
     margin: 0;
     font-size: 1.65rem;
 }
 
 .reviewPanel p {
-    max-width: 620px;
     margin: 0;
     color: var(--muted);
     line-height: 1.6;
 }
 
-.requirementList {
+.nextStepsCard,
+.requirementList,
+.submissionReminder {
     border: 1px solid var(--line);
     border-radius: 18px;
     background: white;
     padding: 20px;
 }
 
+.nextStepsCard h4,
 .requirementList h4 {
-    margin: 0 0 10px;
+    margin: 0 0 12px;
+}
+
+.nextStepsList {
+    margin: 0;
+    padding-left: 20px;
+
+    display: grid;
+    gap: 10px;
+
+    color: var(--ink);
+    line-height: 1.6;
+}
+
+.submissionBox {
+    display: grid;
+    gap: 4px;
+
+    margin-top: 18px;
+    padding: 16px;
+
+    border-radius: 14px;
+
+    background: #f8fbff;
+    border: 1px solid #d9e7ff;
+
+    text-decoration: none;
+
+    transition:
+            border-color 0.18s ease,
+            background 0.18s ease,
+            transform 0.18s ease;
+}
+
+.submissionBox:hover {
+    background: #f2f7ff;
+    border-color: #bfd7ff;
+
+    transform: translateY(-1px);
+}
+
+.submissionBox:active {
+    transform: translateY(0);
+}
+
+.submissionBox strong {
+    color: var(--ink);
+    font-size: 1rem;
+}
+
+.submissionBox span {
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+.nextStepsNote {
+    margin-top: 16px !important;
+    font-size: 0.95rem;
 }
 
 .requirementList ul {
     margin: 0;
     padding-left: 20px;
+
+    display: grid;
+    gap: 10px;
+
     color: var(--muted);
     line-height: 1.7;
+}
+
+.submissionReminder {
+    background: #f8fbff;
+}
+
+.submissionReminder strong {
+    display: block;
+    margin-bottom: 10px;
+
+    color: var(--ink);
 }
 
 /* =========================================================
@@ -60,8 +144,6 @@
 }
 
 .generationHint {
-    margin-top: 14px !important;
-
     color: var(--muted);
     font-size: 0.92rem;
     font-weight: 650;
