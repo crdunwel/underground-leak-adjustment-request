@@ -28,13 +28,22 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px;
+    align-items: stretch;
 }
 
 .seoFaqGrid article {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+
     border: 1px solid var(--line);
     border-radius: 18px;
+
     background: white;
+
     padding: 20px;
+
     box-shadow: var(--shadow);
 }
 
@@ -45,8 +54,80 @@
 
 .seoFaqGrid p {
     margin: 0;
+
     color: var(--muted);
     line-height: 1.6;
+}
+
+.submitPacketCard {
+    grid-column: 1 / -1;
+
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+    gap: 28px;
+    align-items: stretch;
+
+    height: auto !important;
+}
+
+.submitPacketCard > div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.faqContactCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+
+    min-height: 100%;
+
+    padding: 18px;
+
+    border: 1px solid #d9e7ff;
+    border-radius: 14px;
+
+    background: var(--blue-soft);
+}
+
+.faqEmailLink,
+.faqPhoneLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    width: fit-content;
+
+    color: var(--ink);
+
+    font-weight: 800;
+    text-decoration: none;
+
+    transition:
+            opacity 0.18s ease,
+            transform 0.18s ease;
+}
+
+.faqEmailLink:hover,
+.faqPhoneLink:hover {
+    opacity: 0.78;
+    transform: translateY(-1px);
+}
+
+.faqAddress {
+    display: grid;
+    gap: 4px;
+
+    padding-top: 6px;
+
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+.faqAddress strong {
+    color: var(--ink);
 }
 
 @media (max-width: 720px) {
@@ -57,4 +138,28 @@
     .seoFaqGrid {
         grid-template-columns: 1fr;
     }
+
+    .submitPacketCard {
+        grid-column: auto;
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Prevent generic equal-height flex behavior from affecting submit card */
+
+
+/* Override generic article flex layout */
+.seoFaqGrid article.submitPacketCard {
+    display: grid !important;
+    height: auto !important;
+}
+
+.submitPacketCard > div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.submitPacketCard p {
+    margin-top: 12px;
 }

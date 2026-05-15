@@ -1,14 +1,16 @@
 /* src/components/PreStartPage.tsx */
 
 import { SeoFaq } from './SeoFaq'
+import { SiteFooter } from './SiteFooter'
 
 import { assetPath } from '../lib/assetPath'
 
 type PreStartPageProps = {
     onStart: () => void
+    onTermsClick: () => void
 }
 
-export function PreStartPage({ onStart }: PreStartPageProps) {
+export function PreStartPage({ onStart,  onTermsClick }: PreStartPageProps) {
     return (
         <main className="appShell preStartShell">
             <section className="preStartPanel">
@@ -145,7 +147,10 @@ export function PreStartPage({ onStart }: PreStartPageProps) {
                 </div>
             </section>
 
+            <div className="preStartDivider" aria-hidden="true" />
+
             <SeoFaq />
+            <SiteFooter onTermsClick={onTermsClick} />
         </main>
     )
 }

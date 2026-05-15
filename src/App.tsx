@@ -16,6 +16,7 @@ import { SupportingDocsStep } from './components/SupportingDocsStep'
 import { WorkflowHeader } from './components/WorkflowHeader'
 import { WorkflowProgress } from './components/WorkflowProgress'
 import { RequirementsStep } from './components/RequirementsStep'
+import { SiteFooter } from './components/SiteFooter'
 
 import { TermsPage } from './pages/TermsPage'
 
@@ -422,6 +423,9 @@ function App() {
         return (
             <PreStartPage
                 onStart={startWorkflow}
+                onTermsClick={() => {
+                    navigate({ screen: 'terms' })
+                }}
             />
         )
     }
@@ -607,63 +611,11 @@ function App() {
                 </aside>
             </section>
 
-            <footer className="siteFooter">
-                <div className="footerPrimary">
-                    <span>🔒 Your data stays in this browser</span>
-
-                    <span>
-                        🏛️ Not affiliated with Miami-Dade County
-                    </span>
-
-                    <a
-                        href="#terms"
-                        onClick={(event) => {
-                            event.preventDefault()
-                            navigate({ screen: 'terms' })
-                        }}
-                    >
-                        Terms of Use
-                    </a>
-
-                    <a
-                        href="https://github.com/crdunwel/underground-leak-adjustment-request"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        Open source
-                    </a>
-                </div>
-
-                <div className="footerSecondary">
-                    <span>
-                        Need custom software for your business?
-                    </span>
-
-                    <a
-                        href={`mailto:clayton.dunwell@gmail.com?subject=${encodeURIComponent(
-                            'Custom software inquiry',
-                        )}&body=${encodeURIComponent(
-                            [
-                                'Hi Clayton,',
-                                '',
-                                'I found you through the Underground Leak Adjustment tool.',
-                                '',
-                                "I'm interested in:",
-                                '',
-                                '- Business / industry:',
-                                '- Current workflow or problem:',
-                                '- What feels frustrating or manual today:',
-                                '- What outcome I’m hoping for:',
-                                '',
-                                'Additional details:',
-                                '',
-                            ].join('\n'),
-                        )}`}
-                    >
-                        Let’s talk →
-                    </a>
-                </div>
-            </footer>
+            <SiteFooter
+                onTermsClick={() => {
+                    navigate({ screen: 'terms' })
+                }}
+            />
         </main>
     )
 }

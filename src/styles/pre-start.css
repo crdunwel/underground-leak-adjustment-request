@@ -254,6 +254,24 @@
     padding: 28px 20px;
 }
 
+.preStartDivider {
+    position: relative;
+
+    width: min(100%, 1080px);
+    height: 1px;
+
+    margin: 54px auto 18px;
+
+    background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(148, 163, 184, 0.18) 12%,
+            rgba(148, 163, 184, 0.38) 50%,
+            rgba(148, 163, 184, 0.18) 88%,
+            transparent
+    );
+}
+
 @media (max-width: 900px) {
     .preStartHeroRow {
         grid-template-columns: 1fr;
