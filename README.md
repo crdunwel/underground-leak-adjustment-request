@@ -1,85 +1,146 @@
-# underground-leak-adjustment-request
+# Underground Leak Adjustment Request
 
-Small React + Vite utility app scaffold.
+A small React + Vite utility app that helps Miami-Dade homeowners complete the official Underground / Concealed Leak Adjustment Request form.
 
-## What is included
+The app:
+- walks the user through the form step-by-step
+- captures a digital signature
+- generates a completed PDF packet in the browser
+- supports repair photos and supporting documents
+- works entirely client-side (no backend)
 
-- React + Vite
-- TypeScript
-- GitHub Pages deployment
-- Basic app structure
-- Shared folders for components, data, styles, and lib helpers
-- Print CSS starter
-- Base-aware asset helper
-- Simple starter page
+---
 
-## Setup
+# Features
+
+- React + Vite + TypeScript
+- Client-side PDF generation with `pdf-lib`
+- Digital signature capture
+- Repair photo uploads
+- Invoice / supporting document uploads
+- HEIC / HEIF / WEBP image conversion
+- Draft persistence using IndexedDB + localStorage
+- GitHub Pages ready
+- Mobile-friendly workflow
+- No server required
+
+---
+
+# Local Development
+
+## 1. Install dependencies
 
 ```bash
 npm install
+```
+
+## 2. Start the app
+
+```bash
 npm run dev
 ```
 
-## Commands
+Then open the local URL shown in the terminal.
 
-```bash
-npm run dev       # start local dev server and open browser
-npm run build     # type-check and create production build
-npm run lint      # run eslint
-npm run preview   # preview production build
-npm run deploy    # build and deploy dist/ to GitHub Pages
+Usually:
+
+```txt
+http://localhost:5173
 ```
 
-## GitHub Pages
+---
 
-This app is configured for a GitHub repo named:
+# Available Commands
+
+```bash
+npm run dev       # start local dev server
+npm run build     # create production build
+npm run preview   # preview production build locally
+npm run lint      # run eslint
+```
+
+---
+
+# Project Structure
+
+```txt
+src/
+  components/
+  data/
+  lib/
+  styles/
+  types/
+  App.tsx
+
+public/
+  underground-leak-adjustment-request.pdf
+```
+
+---
+
+# Important Notes
+
+## This app is NOT Miami-Dade Government
+
+This tool only helps users complete the official form.
+
+Users still submit the packet themselves.
+
+---
+
+## Data Storage
+
+The app stores drafts locally in the browser using:
+- IndexedDB
+- localStorage
+
+No data is uploaded to a server.
+
+---
+
+# GitHub Pages Deployment
+
+This project is configured for GitHub Pages.
+
+Expected repo name:
 
 ```txt
 underground-leak-adjustment-request
 ```
 
-The Vite base path is:
+## vite.config.ts
+
+Make sure the base path matches the repo name:
 
 ```ts
 base: '/underground-leak-adjustment-request/'
 ```
 
-After creating the GitHub repo:
+---
+
+## Deploy
+
+Push to GitHub normally:
 
 ```bash
-git remote add origin https://github.com/YOUR_USERNAME/underground-leak-adjustment-request.git
-git branch -M main
-git push -u origin main
-npm run deploy
+git add .
+git commit -m "Initial commit"
+git push
 ```
 
-Then enable Pages:
+GitHub Actions handles deployment automatically.
+
+Live URL:
 
 ```txt
-Settings → Pages → Deploy from branch → gh-pages → /root
+https://crdunwel.github.io/underground-leak-adjustment-request
 ```
 
-## Structure
+---
 
-```txt
-src/
-  components/
-    ExampleCard.tsx
-  data/
-    appConfig.ts
-  lib/
-    assetPath.ts
-  styles/
-    app.css
-    print.css
-  App.tsx
-  index.css
-  main.tsx
-```
+# Static Assets
 
-## Static assets
-
-Static assets go in:
+Place static files inside:
 
 ```txt
 public/
@@ -90,7 +151,13 @@ Use the helper:
 ```ts
 import { assetPath } from './lib/assetPath'
 
-const imageUrl = assetPath('image.png')
+const url = assetPath('image.png')
 ```
 
-This works locally and on GitHub Pages.
+This ensures assets work both locally and on GitHub Pages.
+
+---
+
+# License
+
+MIT
