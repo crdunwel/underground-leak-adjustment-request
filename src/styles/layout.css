@@ -1,0 +1,333 @@
+/* src/styles/layout.css */
+
+.appShell {
+    width: min(100%, 1180px);
+
+    min-height: 100dvh;
+
+    margin: 0 auto;
+    padding: 40px 20px 28px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hero {
+    margin-bottom: 34px;
+}
+
+.heroTopline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.departmentPill {
+    display: inline-flex;
+    width: fit-content;
+    margin: 0 0 20px;
+    border-radius: 10px;
+    background: var(--blue-soft);
+    color: var(--blue-dark);
+    padding: 8px 12px;
+    font-size: 0.95rem;
+    font-weight: 750;
+}
+
+.hero h1 {
+    margin: 0;
+    max-width: 760px;
+    font-size: clamp(2.4rem, 6vw, 4.4rem);
+    line-height: 0.95;
+    letter-spacing: -0.065em;
+}
+
+.heroIntro {
+    max-width: 560px;
+    margin: 24px 0 0;
+    color: var(--muted);
+    font-size: 1.18rem;
+    line-height: 1.65;
+}
+
+.workflowLayout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 330px;
+    gap: 30px;
+    align-items: start;
+}
+
+.workflowCard,
+.sideCard {
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.88);
+    box-shadow: var(--shadow);
+}
+
+.workflowCard {
+    min-height: 560px;
+    padding: 34px;
+}
+
+.stepHeaderTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.stepHeader p {
+    margin: 0 0 12px;
+    color: var(--blue);
+    font-weight: 800;
+}
+
+.stepHeader h2 {
+    margin: 0;
+    font-size: clamp(1.7rem, 4vw, 2.35rem);
+    letter-spacing: -0.04em;
+}
+
+.stepHeader span {
+    display: block;
+    margin-top: 10px;
+    color: var(--muted);
+    line-height: 1.55;
+}
+
+.progressTrack {
+    height: 7px;
+    margin: 32px 0;
+    overflow: hidden;
+    border-radius: 999px;
+    background: #e8eef8;
+}
+
+.progressTrack div {
+    height: 100%;
+    border-radius: inherit;
+    background: var(--blue);
+    transition: width 0.24s ease;
+}
+
+.stepBody {
+    display: grid;
+    gap: 24px;
+}
+
+.sideStack {
+    display: grid;
+    gap: 26px;
+}
+
+.sideCard {
+    padding: 26px;
+}
+
+.sideCard h3 {
+    margin: 0 0 20px;
+    font-size: 1.25rem;
+    letter-spacing: -0.025em;
+}
+
+.progressList {
+    display: grid;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.progressList li {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    border-radius: 13px;
+    color: var(--muted);
+    padding: 10px;
+    font-weight: 700;
+}
+
+.progressList li span {
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
+    background: #eef2f8;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.progressList li.active {
+    background: var(--blue-soft);
+    color: var(--blue);
+}
+
+.progressList li.active span,
+.progressList li.done span {
+    background: var(--blue);
+    color: white;
+}
+
+.trustCard {
+    display: grid;
+    gap: 8px;
+}
+
+.shieldIcon {
+    display: grid;
+    place-items: center;
+    width: 66px;
+    height: 66px;
+    border-radius: 999px;
+    background: var(--green-soft);
+    font-size: 2rem;
+}
+
+.trustCard p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.55;
+}
+
+.siteFooter {
+    display: flex;
+    justify-content: center;
+    gap: 34px;
+    margin-top: 44px;
+    color: var(--faint);
+    font-size: 0.9rem;
+}
+
+.plumberCard {
+    display: grid;
+    gap: 10px;
+    border-color: #c9dcff;
+    background:
+            linear-gradient(135deg, rgba(11, 92, 255, 0.08), transparent 60%),
+            white;
+}
+
+.plumberIcon {
+    display: grid;
+    place-items: center;
+    width: 66px;
+    height: 66px;
+    border-radius: 999px;
+    background: var(--blue-soft);
+    font-size: 2rem;
+}
+
+.plumberCard h3 {
+    margin-bottom: 0;
+}
+
+.plumberCard p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.55;
+}
+
+.plumberButton {
+    min-height: 44px;
+    border: 0;
+    border-radius: 12px;
+    background: var(--blue);
+    color: white;
+    padding: 0 16px;
+    font-weight: 850;
+}
+
+.plumberButton:hover {
+    background: var(--blue-dark);
+}
+
+.siteFooter {
+    display: grid;
+    gap: 18px;
+    margin-top: 44px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+}
+
+.footerPrimary,
+.footerSecondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.footerPrimary {
+    color: var(--faint);
+    font-size: 0.9rem;
+}
+
+.footerPrimary a,
+.footerSecondary a {
+    color: var(--blue);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.footerPrimary a:hover,
+.footerSecondary a:hover {
+    text-decoration: underline;
+}
+
+.footerSecondary {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.termsInlineLink {
+    width: fit-content;
+    margin-top: 4px;
+    border: 0;
+    background: transparent;
+    color: var(--blue);
+    padding: 0;
+    font-size: 0.95rem;
+    font-weight: 800;
+}
+
+.termsInlineLink:hover {
+    color: var(--blue-dark);
+    text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    .workflowLayout {
+        grid-template-columns: 1fr;
+    }
+
+    .sideStack {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .appShell {
+        padding: 26px 14px 22px;
+    }
+
+    .workflowCard,
+    .sideCard {
+        border-radius: 18px;
+    }
+
+    .workflowCard {
+        padding: 22px;
+    }
+
+    .siteFooter {
+        display: grid;
+        gap: 10px;
+        text-align: center;
+    }
+}

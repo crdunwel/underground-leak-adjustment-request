@@ -1,0 +1,68 @@
+/* src/styles/steps/contact-step.css */
+
+.subSection {
+    display: grid;
+    gap: 16px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: white;
+    padding: 20px;
+}
+
+.subSectionHeader {
+    display: grid;
+    gap: 4px;
+}
+
+.subSectionHeader h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    letter-spacing: -0.025em;
+}
+
+.subSectionHeader p {
+    margin: 0;
+    margin-top: 5px;
+    color: var(--muted);
+    line-height: 1.45;
+}
+
+.sectionHeaderRow {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.inlineCheck {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-width: max-content;
+    color: var(--blue-dark);
+    font-size: 0.9rem;
+    font-weight: 850;
+}
+
+.inlineCheck input {
+    width: 18px;
+    min-height: 18px;
+}
+
+.cityStateZipGrid {
+    grid-template-columns: minmax(0, 1fr) 84px 130px;
+}
+
+@media (max-width: 640px) {
+    .cityStateZipGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .sectionHeaderRow {
+        display: grid;
+    }
+
+    .inlineCheck {
+        min-width: 0;
+    }
+}

@@ -1,0 +1,30 @@
+/* src/styles/steps/signature-step.css */
+
+.signaturePad {
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: var(--blue-soft);
+    padding: 18px;
+}
+
+.signaturePadHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.signatureCanvas {
+    display: block;
+    width: 100%;
+    height: 180px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: white;
+    touch-action: none;
+}
+
+.signaturePad p {
+    margin: 10px 0 0;
+    color: var(--muted);
+}

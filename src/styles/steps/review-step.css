@@ -1,0 +1,78 @@
+/* src/styles/steps/review-step.css */
+
+.reviewPanel h3 {
+    margin: 0;
+    font-size: 1.65rem;
+}
+
+.reviewPanel p {
+    max-width: 620px;
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.requirementList {
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: white;
+    padding: 20px;
+}
+
+.requirementList h4 {
+    margin: 0 0 10px;
+}
+
+.requirementList ul {
+    margin: 0;
+    padding-left: 20px;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+/* =========================================================
+▶ PDF generation state
+========================================================= */
+
+.generatingButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    opacity: 0.92;
+    cursor: wait;
+}
+
+.generatingButton:disabled {
+    opacity: 1;
+}
+
+.buttonSpinner {
+    width: 18px;
+    height: 18px;
+
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-top-color: white;
+    border-radius: 999px;
+
+    animation: button-spin 0.7s linear infinite;
+}
+
+.generationHint {
+    margin-top: 14px !important;
+
+    color: var(--muted);
+    font-size: 0.92rem;
+    font-weight: 650;
+}
+
+@keyframes button-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

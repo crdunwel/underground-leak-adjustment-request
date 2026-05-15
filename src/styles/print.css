@@ -1,21 +1,26 @@
 /* src/styles/print.css */
 
-@page {
-  size: Letter;
-  margin: 0;
-}
-
 @media print {
   body {
-    background: #ffffff;
+    background: white;
   }
 
   .appShell {
-    min-height: auto;
     padding: 0;
   }
 
-  .exampleCard {
+  .sideStack,
+  .siteFooter,
+  .actionRow {
+    display: none;
+  }
+
+  .workflowLayout {
+    display: block;
+  }
+
+  .workflowCard {
+    border: 0;
     box-shadow: none;
   }
 }

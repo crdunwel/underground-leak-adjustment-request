@@ -1,0 +1,300 @@
+/* src/styles/pre-start.css */
+
+.preStartShell {
+    max-width: 1180px;
+}
+
+.preStartPanel {
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 28px;
+    background: white;
+    box-shadow: var(--shadow);
+}
+
+.preStartHeroRow {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 40px;
+    align-items: center;
+    padding: clamp(30px, 6vw, 52px);
+    background:
+            radial-gradient(circle at top right, rgba(11, 92, 255, 0.08), transparent 24rem),
+            linear-gradient(135deg, rgba(11, 92, 255, 0.045), transparent 44%);
+}
+
+.preStartCopy h1 {
+    margin: 0;
+    max-width: 760px;
+    font-size: clamp(2.6rem, 6.4vw, 4.4rem);
+    line-height: 0.95;
+    letter-spacing: -0.07em;
+}
+
+.preStartCopy > .preStartIntro {
+    max-width: 680px;
+    margin: 22px 0 0;
+    color: var(--muted);
+    font-size: 1.15rem;
+    line-height: 1.65;
+}
+
+.preStartActions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.secondaryLinkButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: white;
+    color: var(--ink);
+    padding: 0 24px;
+    font-weight: 850;
+    text-decoration: none;
+}
+
+.secondaryLinkButton:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+}
+
+.preStartCopy > .browserNote {
+    margin-top: 24px;
+    font-size: 0.98rem;
+    color: var(--muted);
+}
+
+.preStartIllustration {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 280px;
+}
+
+.preStartIllustration::before {
+    content: "";
+    position: absolute;
+    width: 245px;
+    height: 245px;
+    border-radius: 999px;
+    background: var(--blue-soft);
+}
+
+.clipboardIcon {
+    position: relative;
+    z-index: 1;
+    width: 190px;
+    min-height: 225px;
+    border: 3px solid #b8d2ff;
+    border-radius: 18px;
+    background: white;
+    box-shadow: 0 18px 45px rgba(11, 92, 255, 0.16);
+    padding: 46px 24px 24px;
+}
+
+.clipTop {
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    width: 78px;
+    height: 34px;
+    border-radius: 12px 12px 6px 6px;
+    background: var(--blue);
+    transform: translateX(-50%);
+}
+
+.clipTop::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border: 7px solid var(--blue);
+    border-radius: 999px;
+    background: white;
+    transform: translateX(-50%);
+}
+
+.clipboardIcon strong {
+    display: block;
+    margin-bottom: 22px;
+    color: var(--ink);
+    font-size: 0.9rem;
+    line-height: 1.25;
+}
+
+.clipboardIcon span {
+    display: block;
+    height: 8px;
+    margin-top: 16px;
+    border-radius: 999px;
+    background: #dce8fb;
+}
+
+.clipboardIcon span::before {
+    content: "✓";
+    display: inline-block;
+    margin-left: -18px;
+    color: var(--blue);
+    font-weight: 900;
+}
+
+.dropBadge {
+    position: absolute;
+    z-index: 2;
+    right: 36px;
+    bottom: 42px;
+    display: grid;
+    place-items: center;
+    width: 92px;
+    height: 92px;
+    border: 2px solid #c8dbff;
+    border-radius: 999px;
+    background: white;
+    box-shadow: 0 14px 36px rgba(15, 23, 42, 0.12);
+    font-size: 2.4rem;
+}
+
+.overviewBlock {
+    padding: 30px;
+    border-top: 1px solid #edf2fa;
+    background: #fbfdff;
+}
+
+.overviewBlock h2 {
+    margin: 0 0 22px;
+    font-size: 1.45rem;
+    letter-spacing: -0.035em;
+}
+
+.overviewGrid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.overviewCard {
+    min-height: 190px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: white;
+    padding: 20px;
+}
+
+.overviewIcon {
+    display: grid;
+    place-items: center;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 16px;
+    border-radius: 999px;
+    font-size: 1.5rem;
+}
+
+.blueIcon {
+    background: var(--blue-soft);
+}
+
+.greenIcon {
+    background: var(--green-soft);
+}
+
+.goldIcon {
+    background: #fff3d8;
+}
+
+.redIcon {
+    background: #ffe6e6;
+}
+
+.overviewCard h3 {
+    margin: 0 0 10px;
+    font-size: 1.04rem;
+    letter-spacing: -0.02em;
+}
+
+.overviewCard p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.55;
+}
+
+.preStartNotice {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 14px;
+    align-items: center;
+    margin-top: 18px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--blue-soft);
+    padding: 16px 18px;
+}
+
+.preStartNotice span {
+    font-size: 1.5rem;
+}
+
+.preStartNotice p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.45;
+    font-weight: bold;
+}
+
+.appShell.preStartShell {
+    padding: 28px 20px;
+}
+
+@media (max-width: 900px) {
+    .preStartHeroRow {
+        grid-template-columns: 1fr;
+    }
+
+    .preStartIllustration {
+        display: none;
+    }
+
+    .overviewGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .preStartPanel {
+        border-radius: 22px;
+    }
+
+    .preStartHeroRow {
+        padding: 28px 22px;
+    }
+
+    .preStartActions {
+        display: grid;
+    }
+
+    .primaryButton,
+    .secondaryLinkButton {
+        width: 100%;
+    }
+
+    .overviewBlock {
+        padding: 22px;
+    }
+
+    .overviewGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .overviewCard {
+        min-height: 0;
+    }
+}

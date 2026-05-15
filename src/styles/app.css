@@ -1,68 +1,11 @@
-/* src/styles/app.css */
+/* src/App.tsx */
 
-:root {
-  --paper: #ffffff;
-  --page-bg: #efefef;
-  --ink: #1b1b1b;
-  --muted: #6d6d6d;
-  --line: #dedede;
-  --blue: #4f73bf;
-  --shadow: rgba(0, 0, 0, 0.08);
-}
-
-.appShell {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 32px;
-}
-
-.exampleCard {
-  width: min(100%, 680px);
-  background: var(--paper);
-  border: 1px solid var(--line);
-  box-shadow: 0 12px 28px var(--shadow);
-  padding: 32px;
-}
-
-.eyebrow {
-  margin: 0 0 8px;
-  color: var(--blue);
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-.exampleCard h1 {
-  margin: 0;
-  color: var(--ink);
-  font-size: clamp(32px, 6vw, 56px);
-  line-height: 1;
-  letter-spacing: -0.05em;
-}
-
-.exampleCard p {
-  max-width: 52ch;
-  margin: 16px 0 0;
-  color: var(--muted);
-  font-size: 18px;
-  line-height: 1.45;
-}
-
-.commandList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 24px;
-}
-
-code {
-  display: inline-flex;
-  background: #f4f4f4;
-  border: 1px solid var(--line);
-  padding: 8px 10px;
-  color: var(--ink);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 13px;
-}
+import './styles/base.css'
+import './styles/layout.css'
+import './styles/forms.css'
+import './styles/steps/account-step.css'
+import './styles/steps/contact-step.css'
+import './styles/steps/repair-step.css'
+import './styles/steps/signature-step.css'
+import './styles/steps/review-step.css'
+import './styles/print.css'

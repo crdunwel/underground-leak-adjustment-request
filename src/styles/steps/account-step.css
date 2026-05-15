@@ -1,0 +1,99 @@
+/* src/styles/steps/account-step.css */
+
+fieldset {
+    min-width: 0;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+legend {
+    margin-bottom: 18px;
+    font-size: 1.35rem;
+    font-weight: 850;
+    letter-spacing: -0.025em;
+}
+
+.choiceGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.choiceCard {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    min-height: 118px;
+    width: 100%;
+    border: 2px solid var(--line);
+    border-radius: 22px;
+    background: white;
+    color: var(--ink);
+    padding: 22px;
+    text-align: left;
+    transition:
+            border-color 0.18s ease,
+            background 0.18s ease,
+            box-shadow 0.18s ease;
+}
+
+.choiceCard:hover {
+    border-color: #8bb6ff;
+}
+
+.choiceCard.selected {
+    border-color: var(--blue);
+    background: #f4f8ff;
+    box-shadow: 0 0 0 4px rgba(11, 92, 255, 0.08);
+}
+
+.choiceCard.selected::after {
+    content: '✓';
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    background: var(--blue);
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 900;
+}
+
+.choiceCard strong,
+.choiceCard small {
+    grid-column: 2;
+}
+
+.choiceCard strong {
+    font-size: 1.1rem;
+}
+
+.choiceCard small {
+    margin-top: 4px;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.choiceIcon {
+    grid-row: span 2;
+    display: grid;
+    place-items: center;
+    width: 58px;
+    height: 58px;
+    margin-right: 18px;
+    border-radius: 999px;
+    background: var(--blue-soft);
+    font-size: 1.55rem;
+}
+
+@media (max-width: 640px) {
+    .choiceGrid {
+        grid-template-columns: 1fr;
+    }
+}

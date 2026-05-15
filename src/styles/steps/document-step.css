@@ -1,0 +1,202 @@
+/* src/styles/steps/document-step.css */
+
+.instructionCard {
+    display: grid;
+    gap: 6px;
+    border: 1px solid #c9dcff;
+    border-radius: 16px;
+    background: var(--blue-soft);
+    padding: 15px;
+}
+
+.instructionCard strong {
+    color: var(--blue-dark);
+}
+
+.instructionCard p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+.uploadBox {
+    position: relative;
+
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    gap: 10px;
+
+    border: 2px dashed var(--blue);
+    border-radius: 18px;
+
+    background: white;
+
+    padding: 30px 24px;
+
+    color: var(--blue-dark);
+
+    cursor: pointer;
+
+    transition:
+            border-color 0.18s ease,
+            background 0.18s ease,
+            transform 0.18s ease;
+}
+
+.uploadBox:hover {
+    background: #f8fbff;
+    border-color: var(--blue-dark);
+}
+
+.uploadBoxIcon {
+    display: grid;
+    place-items: center;
+
+    width: 68px;
+    height: 68px;
+
+    border-radius: 999px;
+
+    background: var(--blue-soft);
+
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.uploadBox span {
+    font-size: 1.08rem;
+    font-weight: 850;
+}
+
+.uploadBox small {
+    color: var(--muted);
+    font-weight: 650;
+}
+
+.uploadBox input {
+    position: absolute;
+    inset: 0;
+
+    opacity: 0;
+
+    cursor: pointer;
+}
+
+.photoStoryList {
+    display: grid;
+    gap: 18px;
+}
+
+.photoStoryCard,
+.fileCard {
+    display: grid;
+    gap: 18px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: white;
+    padding: 16px;
+}
+
+.photoStoryCard {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: stretch;
+    cursor: grab;
+}
+
+.photoStoryCard:active {
+    cursor: grabbing;
+}
+
+.photoStoryImageWrap {
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #eef2f8;
+}
+
+.photoStoryImageWrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photoStoryImageWrap span {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    display: grid;
+    place-items: center;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 999px;
+
+    background: var(--blue);
+
+    color: white;
+    font-weight: 850;
+}
+
+.photoStoryContent {
+    min-width: 0;
+
+    display: grid;
+    gap: 14px;
+
+    align-content: start;
+}
+
+.photoStoryMeta,
+.fileCard > div {
+    display: grid;
+    gap: 4px;
+}
+
+.photoStoryMeta strong {
+    overflow-wrap: anywhere;
+    line-height: 1.35;
+}
+
+.photoStoryMeta small,
+.fileCard small {
+    color: var(--muted);
+    font-weight: 650;
+}
+
+.photoStoryActions {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.fileList {
+    display: grid;
+    gap: 14px;
+}
+
+.removeFileButton {
+    min-height: 42px;
+
+    border: 1px solid #fecaca;
+    border-radius: 999px;
+
+    background: #fff5f5;
+    color: var(--danger);
+
+    padding: 0 16px;
+
+    font-weight: 850;
+}
+
+.removeFileButton:hover {
+    background: #fee2e2;
+    border-color: #fca5a5;
+}
+
+@media (max-width: 640px) {
+    .photoStoryCard {
+        grid-template-columns: 1fr;
+    }
+}
