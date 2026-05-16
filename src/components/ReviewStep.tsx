@@ -20,18 +20,17 @@ export function ReviewStep({
     return (
         <div className="stepBody reviewPanel">
             <div className="reviewIntro">
-                <h3>Your leak adjustment packet is ready</h3>
+                <h3>Your packet is ready to download</h3>
 
                 <p>
-                    We will generate a completed PDF packet
-                    containing your signed adjustment form,
-                    repair photos, invoices, and supporting
-                    documentation.
+                    Click below to create one completed PDF packet
+                    with your signed adjustment form, repair photos,
+                    invoices, and supporting documents.
                 </p>
             </div>
 
             <section className="requirementList">
-                <h4>Your packet includes</h4>
+                <h4>The PDF packet will include</h4>
 
                 <ul>
                     <li>
@@ -78,8 +77,8 @@ export function ReviewStep({
 
                 <ol className="nextStepsList">
                     <li>
-                        Review the packet to confirm the
-                        information and attachments look correct.
+                        Review carefully the packet to confirm the
+                        information and attachments is correct.
                     </li>
 
                     <li>

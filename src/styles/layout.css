@@ -160,6 +160,7 @@
     font-size: 0.9rem;
 }
 
+
 .progressList li.active {
     background: var(--blue-soft);
     color: var(--blue);
@@ -184,6 +185,17 @@
     border-radius: 999px;
     background: var(--green-soft);
     font-size: 2rem;
+}
+
+.shieldIcon svg {
+    width: 34px;
+    height: 34px;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 .trustCard p {
@@ -237,7 +249,7 @@
 
 .termsInlineLink {
     width: fit-content;
-    margin-top: 4px;
+    margin-top: 8px;
     border: 0;
     background: transparent;
     color: var(--blue);

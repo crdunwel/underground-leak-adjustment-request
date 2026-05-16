@@ -57,8 +57,27 @@ import './styles/base.css'
 import './styles/layout.css'
 import './styles/forms.css'
 import './styles/steps/document-step.css'
-import './styles/terms.css'
 import './styles/print.css'
+
+function TrustShieldIcon() {
+    return (
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path
+                d="
+                    M16 3
+                    25 6.5
+                    v7.5
+                    c0 6.2-3.8 11.1-9 14
+                    -5.2-2.9-9-7.8-9-14
+                    V6.5
+                    Z
+                "
+            />
+
+            <path d="M12 16.5 15 19.5 21 13.5" />
+        </svg>
+    )
+}
 
 function getStepIndexFromId(stepId: StepId) {
     const index = steps.findIndex((step) => step.id === stepId)
@@ -176,6 +195,21 @@ function App() {
             setCurrentStepIndex(getStepIndexFromId(nextRoute.stepId))
         }
     }
+
+    // =========================================================
+    // ▶ Scroll restoration
+    // =========================================================
+
+    useEffect(() => {
+        if (route.screen !== 'workflow') return
+
+        window.requestAnimationFrame(() => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth',
+            })
+        })
+    }, [route.screen, currentStepIndex])
 
     // =========================================================
     // ▶ Draft persistence
@@ -532,6 +566,9 @@ function App() {
                             hasError={hasFieldError(!signatureDataUrl)}
                             signatureDataUrl={signatureDataUrl}
                             onSignatureChange={setSignatureDataUrl}
+                            onTermsClick={() => {
+                                navigate({ screen: 'terms' })
+                            }}
                         />
                     )}
 
@@ -560,10 +597,13 @@ function App() {
                     />
 
                     <section className="sideCard trustCard">
-                        <div className="shieldIcon">🛡️</div>
+                        <div className="shieldIcon">
+                            <TrustShieldIcon />
+                        </div>
 
-                        <h3>We’re not the government</h3>
-
+                        <h3 style={{ marginBottom: '6px' }}>
+                            We’re not the government
+                        </h3>
                         <p>
                             We simplify the process.
                             You submit to the agency.

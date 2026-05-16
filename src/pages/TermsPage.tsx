@@ -1,10 +1,22 @@
 /* src/pages/TermsPage.tsx */
 
+import { useEffect } from 'react'
+
+import '@/styles/terms.css'
+
 type TermsPageProps = {
     onBack: () => void
 }
 
 export function TermsPage({ onBack }: TermsPageProps) {
+
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'auto',
+        })
+    }, [])
+
     return (
         <main className="appShell termsShell">
             <section className="termsCard">

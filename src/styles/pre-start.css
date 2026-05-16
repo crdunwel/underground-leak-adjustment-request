@@ -285,6 +285,39 @@
     filter: drop-shadow(0 16px 28px rgba(15, 23, 42, 0.10));
 }
 
+/* src/styles/pre-start.css */
+
+.overviewIcon svg {
+    width: 30px;
+    height: 30px;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.blueIcon {
+    background: var(--blue-soft);
+    color: var(--blue);
+}
+
+.greenIcon {
+    background: var(--green-soft);
+    color: #15803d;
+}
+
+.goldIcon {
+    background: #fff3d8;
+    color: #b7791f;
+}
+
+.redIcon {
+    background: #ffe6e6;
+    color: var(--danger);
+}
+
 @media (max-width: 900px) {
     .preStartHeroRow {
         grid-template-columns: 1fr;

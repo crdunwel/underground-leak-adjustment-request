@@ -28,3 +28,93 @@
     margin: 10px 0 0;
     color: var(--muted);
 }
+
+.signatureExplainer {
+    display: grid;
+    gap: 16px;
+
+    margin-bottom: 22px;
+
+    border: 1px solid var(--line);
+    border-radius: 18px;
+
+    background: white;
+
+    padding: 20px;
+}
+
+.signatureExplainer h3 {
+    margin: 0;
+
+    font-size: 1.2rem;
+    letter-spacing: -0.03em;
+}
+
+.signatureExplainer p {
+    margin: 0;
+
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.signatureTermsText {
+    font-size: 0.92rem;
+}
+
+.inlineTermsButton {
+    border: 0;
+    background: transparent;
+
+    color: var(--blue);
+
+    padding: 0;
+
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.inlineTermsButton:hover {
+    text-decoration: underline;
+}
+
+.signatureDisabledHint {
+    color: var(--muted);
+
+    font-size: 0.92rem;
+    font-weight: 700;
+}
+
+.signatureFormLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    width: fit-content;
+
+    border: 1px solid #cfe0ff;
+    border-radius: 12px;
+
+    background: #f8fbff;
+
+    color: var(--blue);
+
+    padding: 12px 14px;
+
+    font-size: 0.92rem;
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition:
+            border-color 0.18s ease,
+            background 0.18s ease,
+            transform 0.18s ease;
+}
+
+.signatureFormLink:hover {
+    border-color: #9fc2ff;
+    background: #eef5ff;
+
+    transform: translateY(-1px);
+}
