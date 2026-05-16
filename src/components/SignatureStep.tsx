@@ -175,9 +175,7 @@ export function SignatureStep({
 
                 <a
                     className="signatureFormLink"
-                    href={assetPath(
-                        'underground-leak-adjustment-request.pdf',
-                    )}
+                    href="https://www.miamidade.gov/resources/water/documents/forms/underground-leak-adjustment-request.pdf"
                     target="_blank"
                     rel="noreferrer"
                 >
