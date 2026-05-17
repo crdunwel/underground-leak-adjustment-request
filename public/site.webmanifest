@@ -1,15 +1,15 @@
 {
-  "name": "Underground Leak Packet Helper",
-  "short_name": "Leak Helper",
-  "description": "Prepare a Miami-Dade underground leak adjustment request packet in your browser.",
-  "start_url": "/underground-leak-adjustment-request/",
-  "scope": "/underground-leak-adjustment-request/",
+  "name": "Miami-Dade Leak Adjustment Assistant",
+  "short_name": "Leak Assistant",
+  "description": "Prepare a Miami-Dade underground or concealed leak adjustment request packet in your browser.",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0b5cff",
   "icons": [
     {
-      "src": "/underground-leak-adjustment-request/apple-touch-icon.png",
+      "src": "/apple-touch-icon.png",
       "sizes": "180x180",
       "type": "image/png"
     }
