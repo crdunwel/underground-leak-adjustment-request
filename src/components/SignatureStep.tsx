@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from 'react'
 
 import '@/styles/steps/signature-step.css'
-import {assetPath} from "@/lib/assetPath.ts";
 
 type SignatureStepProps = {
     hasError: boolean

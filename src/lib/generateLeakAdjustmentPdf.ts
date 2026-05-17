@@ -43,9 +43,10 @@ type SignaturePosition = {
 
 const DEBUG_COORDINATES = false
 
-const PACKET_HELPER_NAME = 'Underground Leak Packet Helper'
+const PACKET_HELPER_NAME = 'Underground/Concealed Leak Adjustment Request Helper'
 const PACKET_HELPER_URL =
-    'https://crdunwel.github.io/underground-leak-adjustment-request'
+    'https://miamileakadjustment.com'
+
 
 const TEXT_POSITIONS = {
     page1Date: { page: 0, x: 390, y: 183, size: 10, maxWidth: 95 },
