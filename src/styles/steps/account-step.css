@@ -92,6 +92,32 @@ legend {
     font-size: 1.55rem;
 }
 
+.accountStepFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.browserPrivacyNote {
+    flex-shrink: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-weight: 650;
+    white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+    .accountStepFooter {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .browserPrivacyNote {
+        white-space: normal;
+        margin-top: 18px;
+    }
+}
+
 @media (max-width: 640px) {
     .choiceGrid {
         grid-template-columns: 1fr;

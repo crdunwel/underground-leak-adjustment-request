@@ -109,9 +109,24 @@ export function PreStartPage({
                             </a>
                         </div>
 
-                        <p className="browserNote">
-                            🔒 Your information stays in this browser.
-                        </p>
+                        <div className="preStartTrustNotes">
+                            <p className="browserNote">
+                                🔒 Your information stays in this browser.
+                            </p>
+
+                            <p className="officialOptionNote">
+                                You can also complete this process directly through the official Miami-Dade website.
+                            </p>
+
+                            <a
+                                className="officialSiteLink"
+                                href="https://www.miamidade.gov/global/service.page?Mduid_service=ser1481317436214369"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                ↗ Official Miami-Dade leak page
+                            </a>
+                        </div>
                     </div>
 
                     <div

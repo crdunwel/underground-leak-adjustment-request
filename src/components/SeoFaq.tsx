@@ -66,13 +66,18 @@ export function SeoFaq() {
                     </p>
                 </article>
 
-                <article>
-                    <h3>What documents should I include?</h3>
+                <article className="requirementsFaqCard">
+                    <h3>What you'll need to complete this form</h3>
+
                     <p>
-                        You should include the completed signed form generated
-                        by this tool, a repair invoice or repair statement, and
-                        before and after photos of the plumbing repair.
+                        Before you start, gather the required information and files.
                     </p>
+
+                    <ul className="faqChecklist">
+                        <li>Your Miami-Dade water account information</li>
+                        <li>A repair invoice or repair statement</li>
+                        <li>Before and after photos of the repair</li>
+                    </ul>
                 </article>
 
                 <article>
@@ -118,6 +123,15 @@ export function SeoFaq() {
                             The official form currently lists this contact
                             information for Miami-Dade Water and Sewer.
                         </p>
+
+                        <a
+                            className="faqInlineOfficialLink"
+                            href="https://www.miamidade.gov/global/service.page?Mduid_service=ser1481317436214369"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            ↗ Official Miami-Dade leak page
+                        </a>
                     </div>
 
                     <div className="faqContactCard">

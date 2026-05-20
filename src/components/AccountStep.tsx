@@ -67,13 +67,20 @@ export function AccountStep({ formData, updateField, hasFieldError }: StepProps)
                 </label>
             </div>
 
-            <details className="whyBox">
-                <summary>Why we ask this</summary>
-                <p>
-                    The official request asks for the name on account and account number on
-                    both pages of the form.
-                </p>
-            </details>
+            <div className="accountStepFooter">
+                <details className="whyBox">
+                    <summary>Why we ask this</summary>
+
+                    <p>
+                        The official request asks for the name on account and account number on
+                        both pages of the form.
+                    </p>
+                </details>
+
+                <div className="browserPrivacyNote">
+                    🔒 Your information stays in this browser.
+                </div>
+            </div>
         </div>
     )
 }

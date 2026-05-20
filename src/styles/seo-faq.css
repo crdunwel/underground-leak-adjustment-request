@@ -145,6 +145,7 @@
     }
 }
 
+
 /* Prevent generic equal-height flex behavior from affecting submit card */
 
 
@@ -162,4 +163,76 @@
 
 .submitPacketCard p {
     margin-top: 12px;
+}
+
+/* # FAQ checklist card */
+
+.requirementsFaqCard {
+    border-color: #d9e7ff;
+    background:
+            linear-gradient(135deg, rgba(11, 92, 255, 0.045), transparent 55%),
+            white;
+}
+
+.faqChecklist {
+    display: grid;
+    gap: 10px;
+
+    margin: 16px 0 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.faqChecklist li {
+    position: relative;
+
+    padding-left: 30px;
+
+    color: var(--ink);
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+.faqChecklist li::before {
+    content: "✓";
+
+    position: absolute;
+    top: 0.05em;
+    left: 0;
+
+    display: grid;
+    place-items: center;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 999px;
+
+    background: var(--blue-soft);
+    color: var(--blue);
+
+    font-size: 0.78rem;
+    font-weight: 900;
+}
+
+.faqInlineOfficialLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    margin-top: 14px;
+
+    width: fit-content;
+
+    color: var(--blue);
+
+    font-size: 0.94rem;
+    font-weight: 750;
+
+    text-decoration: none;
+}
+
+.faqInlineOfficialLink:hover {
+    text-decoration: underline;
 }
